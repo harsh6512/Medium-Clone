@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+
 interface BlogCardProps{
     authorName:string;
     title:string;
@@ -14,7 +15,7 @@ export const BlogCard = ({
     content,
     publishedDate
 }: BlogCardProps) => {
-    return <Link to={`/blog/${id}`}>
+    return <Link to={`/blog/get/${id}`}>
         <div className="p-4 border-b border-slate-200 pb-4 w-screen max-w-screen-md cursor-pointer">
             <div className="flex">
                 <Avatar name={authorName} />
