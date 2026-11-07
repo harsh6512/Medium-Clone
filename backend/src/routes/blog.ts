@@ -74,7 +74,8 @@ blogRouter.put('/update', async (c) => {
 
     const blog = await prisma.blog.update({
         where: {
-            id: body.id
+            id: body.id,
+            authorId: Number(c.get("userId"))
         },
         data: {
             title: body.title,
